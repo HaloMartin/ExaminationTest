@@ -1,6 +1,8 @@
 # ExaminationTest
 方舟行笔试内容
 
+运行环境：Xcode 9.1（9B55），macOS High Sierra 10.13.1
+
 # 题目1，给定两个由0-9数字组成的最长可达30个字符的字符串，请计算他们对应的整数的和
 > 允许使用字符串转最大不超过32bit整型的系统函数，比如123，100，结果为：223
 
@@ -59,4 +61,8 @@
 * 规则2，对于每一单，返回评分规则，好评差评投诉对应的奖惩规则,返回结果中要求key为**MCClientComment**，value为对应的奖惩分数，元素都是**NSNumber**；对应方法：*rewardAndPunishRulesOfCommentsFromDriver:*
 * 规则3，服务分计算规则；对应方法：*scoreOfCommentsFromDriver:*
 
-***MCDriverTest***是测试类，用来模仿调用司机对象，在这需要实现***MCDriverCommentRules***协议，这里我使用了delegate的方式，让**MCDriverTest**来决定规则，如果不需要的话，也可以直接在**MCDriver**中加上这个协议，就想***MCDriverService***一样.
+另外**MCDriverTest**是测试类，用来模仿调用司机对象，在这需要实现***MCDriverCommentRules***协议，这里我使用了delegate的方式，让**MCDriverTest**来决定规则，如果不需要的话，也可以直接在**MCDriver**中加上这个协议，就想***MCDriverService***一样。
+
+此外在MCDriver的init方法中，我模拟了100个数据，方便测试，另外也打印了一些信息，如果不需要的话可以注释掉。
+
+其他可以参考代码，main中已经写好了相关测试代码，取消相关注释即可运行。
