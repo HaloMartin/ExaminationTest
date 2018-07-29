@@ -61,7 +61,7 @@
 * 规则2，对于每一单，返回评分规则，好评差评投诉对应的奖惩规则,返回结果中要求key为**MCClientComment**，value为对应的奖惩分数，元素都是**NSNumber**；对应方法：*rewardAndPunishRulesOfCommentsFromDriver:*
 * 规则3，服务分计算规则；对应方法：*scoreOfCommentsFromDriver:*
 
-另外**MCDriverTest**是测试类，用来模仿调用司机对象，在这需要实现***MCDriverCommentRules***协议，这里我使用了delegate的方式，让**MCDriverTest**来决定规则，如果不需要的话，也可以直接在**MCDriver**中加上这个协议，就想***MCDriverService***一样。
+另外 **MCDriverTest** 是测试类，用来模仿调用司机对象，在这需要实现 ***MCDriverCommentRules*** 协议，这里我使用了delegate的方式，让 **MCDriverTest** 来决定规则，如果不需要的话，也可以直接在 **MCDriver** 中加上这个协议，就想 ***MCDriverService*** 一样。
 
 此外在MCDriver的init方法中，我模拟了100个数据，方便测试，另外也打印了一些信息，如果不需要的话可以注释掉。
 
