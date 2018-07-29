@@ -33,9 +33,22 @@ typedef enum : NSUInteger {
 @property (nonatomic, weak) id<MCDriverCommentRules> delegate;
 
 -(instancetype)init;
+/** @brief 获取已完成的订单数量
+ * @result 返回订单数量
+ */
 -(NSNumber *)getOrdersNumber;
+/** @brief 获取指定范围内的订单信息
+ * @param range 指定范围
+ * @result 返回指定范围内的订单信息
+ */
 -(NSArray *)getOrdersWithRange:(NSRange)range;
+/** @brief 获取计算服务分需要的最少的订单数量
+ * @result 返回订单数量
+ */
 -(NSNumber *)getLeastCommentNumber;
+/** @brief 获取奖惩规则
+ * @result 返回奖惩规则
+ */
 -(NSDictionary *)getRewardAndPunishRulesDictionary;
 
 @end
